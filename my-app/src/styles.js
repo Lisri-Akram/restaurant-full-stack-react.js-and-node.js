@@ -1,0 +1,926 @@
+// styles.js
+
+const primaryColor = '#FF5722'; // Deep Orange
+const secondaryColor = '#4CAF50'; // Green
+const tertiaryColor = '#607D8B'; // Blue Gray
+const lightBg = '#F5F5F5'; // Light Grey
+const darkText = '#333333';
+const lightText = '#FFFFFF';
+
+const styles = {
+  // --- Global Styles ---
+  app: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    fontFamily: 'Roboto, sans-serif',
+    backgroundColor: lightBg,
+  },
+  main: {
+    flexGrow: 1,
+    padding: '20px',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    width: '100%',
+  },
+  page: {
+    padding: '40px 0',
+  },
+  pageTitle: {
+    fontSize: '3em',
+    color: primaryColor,
+    marginBottom: '10px',
+    textAlign: 'center',
+  },
+  pageSubtitle: {
+    fontSize: '1.2em',
+    color: tertiaryColor,
+    textAlign: 'center',
+    marginBottom: '40px',
+  },
+  contentSection: {
+    padding: '20px 0',
+  },
+  sectionTitle: {
+    fontSize: '2.5em',
+    color: darkText,
+    textAlign: 'center',
+    marginBottom: '40px',
+  },
+
+  // --- Header Styles ---
+  header: {
+    backgroundColor: lightText,
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    padding: '10px 20px',
+    position: 'sticky',
+    top: 0,
+    zIndex: 100,
+  },
+  headerContent: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  logo: {
+    display: 'flex',
+    alignItems: 'center',
+    cursor: 'pointer',
+  },
+  logoIcon: {
+    fontSize: '2em',
+    marginRight: '10px',
+    color: primaryColor,
+  },
+  logoText: {
+    fontSize: '1.8em',
+    fontWeight: 'bold',
+    color: primaryColor,
+  },
+  nav: {
+    display: 'flex',
+    gap: '15px',
+    alignItems: 'center',
+  },
+  navButton: {
+    background: 'none',
+    border: 'none',
+    padding: '10px 15px',
+    fontSize: '1em',
+    cursor: 'pointer',
+    color: darkText,
+    fontWeight: '500',
+    borderRadius: '4px',
+    transition: 'background-color 0.3s, color 0.3s',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+  },
+  navButton: {
+    background: 'none',
+    border: 'none',
+    padding: '10px 15px',
+    fontSize: '1em',
+    cursor: 'pointer',
+    color: darkText,
+    fontWeight: '500',
+    borderRadius: '4px',
+    transition: 'background-color 0.3s, color 0.3s',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+    textDecoration: 'none',
+  },
+  navButtonActive: {
+    color: primaryColor,
+    borderBottom: `2px solid ${primaryColor}`,
+  },
+  cartButton: {
+    backgroundColor: secondaryColor,
+    color: lightText,
+    border: 'none',
+    padding: '10px 20px',
+    fontSize: '1em',
+    borderRadius: '25px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+    marginLeft: '10px',
+  },
+  badge: {
+    position: 'absolute',
+    top: '-5px',
+    right: '-5px',
+    backgroundColor: primaryColor,
+    color: lightText,
+    borderRadius: '50%',
+    padding: '2px 7px',
+    fontSize: '0.7em',
+    fontWeight: 'bold',
+  },
+
+  // --- Footer Styles ---
+  footer: {
+    backgroundColor: darkText,
+    color: lightText,
+    padding: '40px 20px 10px',
+    marginTop: 'auto',
+  },
+  footerContent: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    paddingBottom: '20px',
+    borderBottom: '1px solid #444',
+  },
+  footerSection: {
+    flex: '1',
+    minWidth: '200px',
+    marginBottom: '20px',
+  },
+  footerTitle: {
+    fontSize: '1.2em',
+    color: primaryColor,
+    marginBottom: '15px',
+  },
+  footerText: {
+    fontSize: '0.9em',
+    color: '#ccc',
+    lineHeight: '1.6',
+  },
+  footerLinks: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px',
+  },
+  footerLink: {
+    color: '#ccc',
+    textDecoration: 'none',
+    transition: 'color 0.3s',
+  },
+  socialLinks: {
+    display: 'flex',
+    gap: '15px',
+    fontSize: '1.5em',
+  },
+  socialIcon: {
+    cursor: 'pointer',
+    transition: 'transform 0.3s',
+  },
+  footerBottom: {
+    textAlign: 'center',
+    paddingTop: '10px',
+  },
+  copyright: {
+    fontSize: '0.8em',
+    color: '#888',
+  },
+
+  // --- Hero Section (HomePage) ---
+  hero: {
+    backgroundImage: 'url("https://images.unsplash.com/photo-1540189549336-e61284a14a38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '400px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: lightText,
+    textAlign: 'center',
+    borderRadius: '8px',
+    marginBottom: '40px',
+    position: 'relative',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+  },
+  heroContent: {
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    padding: '30px 50px',
+    borderRadius: '8px',
+  },
+  heroTitle: {
+    fontSize: '3.5em',
+    marginBottom: '10px',
+  },
+  heroSubtitle: {
+    fontSize: '1.5em',
+    marginBottom: '20px',
+  },
+  heroButton: {
+    backgroundColor: primaryColor,
+    color: lightText,
+    border: 'none',
+    padding: '12px 30px',
+    fontSize: '1.1em',
+    borderRadius: '25px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, transform 0.2s',
+  },
+
+  // --- Menu Section (HomePage) ---
+  menuSection: {
+    padding: '20px 0',
+  },
+  categoryFilter: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '15px',
+    marginBottom: '30px',
+    flexWrap: 'wrap',
+  },
+  categoryButton: {
+    background: lightText,
+    color: tertiaryColor,
+    border: `1px solid ${tertiaryColor}`,
+    padding: '10px 20px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, color 0.3s',
+  },
+  categoryButtonActive: {
+    backgroundColor: primaryColor,
+    color: lightText,
+    borderColor: primaryColor,
+  },
+  menuGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '30px',
+  },
+
+  // --- Menu Card Component ---
+  menuCard: {
+    backgroundColor: lightText,
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
+    transition: 'transform 0.3s, box-shadow 0.3s',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  menuCardImageContainer: {
+    position: 'relative',
+    height: '200px',
+    overflow: 'hidden',
+  },
+  menuCardImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
+  wishlistButton: {
+    position: 'absolute',
+    top: '10px',
+    right: '10px',
+    background: 'rgba(255, 255, 255, 0.8)',
+    border: 'none',
+    borderRadius: '50%',
+    width: '35px',
+    height: '35px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '1.2em',
+    cursor: 'pointer',
+    transition: 'background 0.3s',
+  },
+  wishlistButtonActive: {
+    color: primaryColor,
+  },
+  menuCardContent: {
+    padding: '15px',
+    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  category: {
+    fontSize: '0.8em',
+    color: secondaryColor,
+    fontWeight: 'bold',
+    marginBottom: '5px',
+  },
+  menuCardTitle: {
+    fontSize: '1.5em',
+    color: darkText,
+    marginBottom: '10px',
+  },
+  menuCardDescription: {
+    fontSize: '0.9em',
+    color: tertiaryColor,
+    marginBottom: '15px',
+    flexGrow: 1,
+  },
+  menuCardFooter: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: '10px',
+  },
+  rating: {
+    color: primaryColor,
+    fontWeight: 'bold',
+    marginRight: '10px',
+  },
+  price: {
+    fontSize: '1.4em',
+    fontWeight: 'bold',
+    color: darkText,
+  },
+  addToCartButton: {
+    backgroundColor: primaryColor,
+    color: lightText,
+    border: 'none',
+    padding: '8px 15px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+  },
+
+  // --- Modal (CartModal) ---
+  modalOverlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
+    zIndex: 1000,
+  },
+  modalContent: {
+    backgroundColor: lightText,
+    width: '400px',
+    height: '100vh',
+    padding: '20px',
+    boxShadow: '-4px 0 10px rgba(0,0,0,0.1)',
+    overflowY: 'auto',
+  },
+  modalHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottom: `1px solid ${lightBg}`,
+    paddingBottom: '15px',
+    marginBottom: '20px',
+  },
+  modalTitle: {
+    fontSize: '1.8em',
+    color: darkText,
+  },
+  closeButton: {
+    background: 'none',
+    border: 'none',
+    fontSize: '1.5em',
+    cursor: 'pointer',
+    color: tertiaryColor,
+  },
+  emptyMessage: {
+    textAlign: 'center',
+    color: tertiaryColor,
+    marginTop: '50px',
+    fontSize: '1.1em',
+  },
+  cartItems: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '15px',
+    marginBottom: '20px',
+  },
+  cartItem: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '10px',
+    borderBottom: `1px solid ${lightBg}`,
+  },
+  cartItemImage: {
+    width: '60px',
+    height: '60px',
+    objectFit: 'cover',
+    borderRadius: '4px',
+    marginRight: '15px',
+  },
+  cartItemInfo: {
+    flexGrow: 1,
+  },
+  cartItemName: {
+    fontSize: '1em',
+    color: darkText,
+    marginBottom: '5px',
+  },
+  cartItemPrice: {
+    fontSize: '0.9em',
+    color: tertiaryColor,
+  },
+  quantityControls: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '0 15px',
+    backgroundColor: lightBg,
+    borderRadius: '4px',
+  },
+  quantityButton: {
+    background: 'none',
+    border: 'none',
+    padding: '5px 10px',
+    cursor: 'pointer',
+    color: darkText,
+    fontSize: '1em',
+  },
+  quantity: {
+    padding: '0 10px',
+    fontWeight: 'bold',
+  },
+  removeButton: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    fontSize: '1.2em',
+    color: primaryColor,
+  },
+  cartFooter: {
+    paddingTop: '15px',
+    borderTop: `1px solid ${lightBg}`,
+  },
+  totalSection: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '15px',
+    fontSize: '1.2em',
+    fontWeight: 'bold',
+  },
+  totalLabel: {
+    color: darkText,
+  },
+  totalAmount: {
+    color: primaryColor,
+  },
+  checkoutButton: {
+    backgroundColor: secondaryColor,
+    color: lightText,
+    width: '100%',
+    padding: '12px',
+    border: 'none',
+    borderRadius: '25px',
+    fontSize: '1.1em',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+  },
+
+  // --- Checkout Page ---
+  checkoutGrid: {
+    display: 'grid',
+    gridTemplateColumns: '2fr 1fr',
+    gap: '40px',
+  },
+  checkoutForm: {
+    backgroundColor: lightText,
+    padding: '30px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  orderSummary: {
+    backgroundColor: lightText,
+    padding: '30px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  formSectionTitle: {
+    fontSize: '1.5em',
+    color: darkText,
+    marginBottom: '20px',
+    borderBottom: `1px solid ${lightBg}`,
+    paddingBottom: '10px',
+  },
+  input: {
+    width: '100%',
+    padding: '12px',
+    marginBottom: '15px',
+    border: `1px solid ${lightBg}`,
+    borderRadius: '4px',
+    fontSize: '1em',
+  },
+  textarea: {
+    width: '100%',
+    padding: '12px',
+    marginBottom: '15px',
+    border: `1px solid ${lightBg}`,
+    borderRadius: '4px',
+    fontSize: '1em',
+    resize: 'vertical',
+  },
+  formRow: {
+    display: 'flex',
+    gap: '15px',
+    marginBottom: '15px',
+  },
+  placeOrderButton: {
+    backgroundColor: primaryColor,
+    color: lightText,
+    width: '100%',
+    padding: '15px',
+    border: 'none',
+    borderRadius: '4px',
+    fontSize: '1.2em',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    marginTop: '20px',
+    transition: 'background-color 0.3s',
+  },
+  summaryTitle: {
+    fontSize: '1.5em',
+    color: darkText,
+    marginBottom: '20px',
+  },
+  summaryItems: {
+    borderBottom: `1px solid ${lightBg}`,
+    paddingBottom: '20px',
+    marginBottom: '20px',
+  },
+  summaryItem: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '15px',
+  },
+  summaryItemImage: {
+    width: '50px',
+    height: '50px',
+    objectFit: 'cover',
+    borderRadius: '4px',
+    marginRight: '10px',
+  },
+  summaryItemInfo: {
+    flexGrow: 1,
+  },
+  summaryItemName: {
+    fontSize: '1em',
+    fontWeight: 'bold',
+  },
+  summaryItemDetails: {
+    fontSize: '0.8em',
+    color: tertiaryColor,
+  },
+  summaryItemPrice: {
+    fontWeight: 'bold',
+    color: primaryColor,
+  },
+  summaryFooter: {},
+  summaryRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '5px 0',
+    color: darkText,
+  },
+  summaryTotal: {
+    borderTop: `2px solid ${primaryColor}`,
+    paddingTop: '10px',
+    marginTop: '10px',
+    fontSize: '1.3em',
+    fontWeight: 'bold',
+    color: primaryColor,
+  },
+  successState: {
+    textAlign: 'center',
+    padding: '50px',
+    backgroundColor: lightText,
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  successIcon: {
+    fontSize: '3em',
+    color: secondaryColor,
+    marginBottom: '20px',
+  },
+  successTitle: {
+    fontSize: '2em',
+    color: secondaryColor,
+    marginBottom: '10px',
+  },
+  successText: {
+    fontSize: '1.1em',
+    color: tertiaryColor,
+  },
+
+  // --- About Page ---
+  aboutHero: {
+    textAlign: 'center',
+    padding: '50px 0',
+  },
+  aboutGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '30px',
+    marginBottom: '40px',
+  },
+  aboutCard: {
+    backgroundColor: lightText,
+    padding: '30px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+    textAlign: 'center',
+  },
+  aboutIcon: {
+    fontSize: '2.5em',
+    color: primaryColor,
+    marginBottom: '15px',
+  },
+  aboutCardTitle: {
+    fontSize: '1.4em',
+    color: darkText,
+    marginBottom: '10px',
+  },
+  aboutCardText: {
+    color: tertiaryColor,
+    fontSize: '0.95em',
+  },
+  storySection: {
+    backgroundColor: lightText,
+    padding: '40px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  storyTitle: {
+    fontSize: '2em',
+    color: primaryColor,
+    marginBottom: '20px',
+    textAlign: 'center',
+  },
+  storyText: {
+    fontSize: '1.1em',
+    lineHeight: '1.8',
+    color: darkText,
+    marginBottom: '15px',
+  },
+
+  // --- Services Page ---
+  servicesHero: {
+    textAlign: 'center',
+    padding: '50px 0',
+  },
+  servicesGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '30px',
+  },
+  serviceCard: {
+    backgroundColor: lightText,
+    padding: '30px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+    textAlign: 'center',
+  },
+  serviceIcon: {
+    fontSize: '3em',
+    color: secondaryColor,
+    marginBottom: '15px',
+  },
+  serviceTitle: {
+    fontSize: '1.5em',
+    color: darkText,
+    marginBottom: '10px',
+  },
+  serviceDescription: {
+    color: tertiaryColor,
+  },
+
+  // --- Wishlist Page ---
+  wishlistGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+    gap: '30px',
+  },
+  wishlistCard: {
+    backgroundColor: lightText,
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+    display: 'flex',
+    overflow: 'hidden',
+  },
+  wishlistImage: {
+    width: '120px',
+    height: '120px',
+    objectFit: 'cover',
+  },
+  wishlistContent: {
+    padding: '15px',
+    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  wishlistTitle: {
+    fontSize: '1.2em',
+    color: darkText,
+    marginBottom: '5px',
+  },
+  wishlistDescription: {
+    fontSize: '0.85em',
+    color: tertiaryColor,
+    marginBottom: '10px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
+  wishlistFooter: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: '10px',
+  },
+  wishlistPrice: {
+    fontSize: '1.3em',
+    fontWeight: 'bold',
+    color: primaryColor,
+  },
+  wishlistActions: {
+    display: 'flex',
+    gap: '10px',
+  },
+  wishlistAddButton: {
+    backgroundColor: secondaryColor,
+    color: lightText,
+    border: 'none',
+    padding: '8px 15px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    fontSize: '0.9em',
+  },
+  wishlistRemoveButton: {
+    background: 'none',
+    border: `1px solid ${primaryColor}`,
+    color: primaryColor,
+    padding: '8px 15px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    fontSize: '0.9em',
+  },
+  emptyState: {
+    textAlign: 'center',
+    padding: '50px',
+    backgroundColor: lightText,
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  emptyIcon: {
+    fontSize: '3em',
+    color: tertiaryColor,
+    marginBottom: '20px',
+  },
+  emptyTitle: {
+    fontSize: '2em',
+    color: darkText,
+    marginBottom: '10px',
+  },
+  emptyText: {
+    fontSize: '1.1em',
+    color: tertiaryColor,
+  },
+
+  // --- Orders Page ---
+  ordersList: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
+  },
+  orderCard: {
+    backgroundColor: lightText,
+    padding: '20px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  orderHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottom: `1px solid ${lightBg}`,
+    paddingBottom: '10px',
+    marginBottom: '15px',
+  },
+  orderTitle: {
+    fontSize: '1.4em',
+    color: darkText,
+  },
+  orderDate: {
+    fontSize: '0.9em',
+    color: tertiaryColor,
+  },
+  orderStatus: {
+    padding: '5px 10px',
+    borderRadius: '20px',
+    backgroundColor: secondaryColor,
+    color: lightText,
+    fontWeight: 'bold',
+    fontSize: '0.9em',
+  },
+  orderItems: {
+    marginBottom: '15px',
+  },
+  orderItem: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '5px 0',
+    fontSize: '1em',
+    color: darkText,
+  },
+  orderFooter: {
+    borderTop: `1px solid ${lightBg}`,
+    paddingTop: '10px',
+    textAlign: 'right',
+  },
+  orderTotal: {
+    fontSize: '1.2em',
+    fontWeight: 'bold',
+    color: primaryColor,
+  },
+
+  // --- Contact Page ---
+  contactGrid: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 2fr',
+    gap: '40px',
+  },
+  contactInfo: {
+    backgroundColor: primaryColor,
+    padding: '30px',
+    borderRadius: '8px',
+    color: lightText,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
+  },
+  contactInfoTitle: {
+    fontSize: '1.8em',
+    marginBottom: '20px',
+    borderBottom: `1px solid ${lightText}`,
+    paddingBottom: '10px',
+  },
+  contactItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '15px',
+  },
+  contactIcon: {
+    fontSize: '1.5em',
+    marginTop: '5px',
+  },
+  contactLabel: {
+    fontSize: '1.1em',
+    fontWeight: 'bold',
+    marginBottom: '5px',
+  },
+  contactText: {
+    fontSize: '0.95em',
+  },
+  contactForm: {
+    backgroundColor: lightText,
+    padding: '30px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+  },
+  submitButton: {
+    backgroundColor: secondaryColor,
+    color: lightText,
+    width: '100%',
+    padding: '12px',
+    border: 'none',
+    borderRadius: '4px',
+    fontSize: '1.1em',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+    marginTop: '10px',
+  },
+  successMessage: {
+    color: secondaryColor,
+    textAlign: 'center',
+    marginTop: '15px',
+    fontWeight: 'bold',
+  }
+};
+
+export default styles;
