@@ -1,11 +1,10 @@
-// API Service
 
 const api = {
   async placeOrder(orderData) {
     // Simulated API call for placing an order
     console.log('API: Placing Order', orderData);
     await new Promise(resolve => setTimeout(resolve, 500)); 
-    // If the backend were running, you'd use the fetch call below:
+    // If the backend were running, i had use the fetch
     /*
     const response = await fetch(`${API_URL}/orders`, {
       method: 'POST',
